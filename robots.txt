@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theperinstudio.netlify.app/sitemap.xml

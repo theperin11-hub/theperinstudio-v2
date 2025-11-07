@@ -1,0 +1,21 @@
+{
+  "name": "react-n4ral7dn",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "@emailjs/browser": "4.4.1",
+    "aos": "2.3.4",
+    "node-fetch": "3.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}

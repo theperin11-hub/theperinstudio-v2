@@ -1,0 +1,106 @@
+:root{
+  --bg:#0b0b0b; --panel:#111; --text:#fff; --muted:#bdbdbd; --accent:#e0b973;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+.navbar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);position:sticky;top:0;z-index:1000}
+.left{display:flex;align-items:center;gap:12px}
+.logo-img{height:54px;border-radius:6px}
+.brand .studio{font-weight:800;color:var(--accent)}
+.brand .tag{font-size:0.85rem;color:var(--muted)}
+.nav a{margin:0 10px;color:var(--muted)}
+.right .icon{margin-left:10px;color:var(--muted)}
+
+/* HERO */
+.hero{height:78vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(0,0,0,0.9))}
+.hero-inner h1{font-size:2.4rem;color:var(--accent);margin-bottom:10px}
+.hero-inner p{color:var(--muted);margin-bottom:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:700}
+.btn.primary{background:var(--accent);color:#000}
+.btn.outline{border:1px solid #444;color:var(--muted);background:transparent}
+
+/* PORTFOLIO */
+.portfolio{padding:40px 20px}
+.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.pf-item{overflow:hidden;border-radius:10px;background:var(--panel);box-shadow:0 8px 20px rgba(0,0,0,0.4)}
+.pf-item img{width:100%;height:240px;object-fit:cover;display:block}
+.pf-caption{padding:12px;color:var(--muted)}
+
+/* GALLERY */
+.gallery{padding:40px 20px}
+.section-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.section-filter button{background:transparent;border:1px solid #222;color:var(--muted);padding:8px 10px;border-radius:8px;cursor:pointer}
+.section-filter button.active{background:var(--accent);color:#000}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gallery-card{background:var(--panel);border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.4)}
+.gallery-card img{width:100%;height:220px;object-fit:cover;display:block}
+.gallery-caption{padding:10px;color:var(--muted)}
+
+/* REVIEWS */
+.reviews{padding:40px 20px;background:var(--panel)}
+.reviews-grid{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.review-card{background:#0c0c0c;padding:16px;border-radius:10px;max-width:340px}
+.stars{color:var(--accent)}
+
+/* ABOUT */
+.story{padding:34px 20px;text-align:center;color:var(--muted);max-width:900px;margin:0 auto;}
+
+/* CONTACT */
+.contact{padding:40px 20px}
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
+.contact-form{display:flex;flex-direction:column;gap:10px}
+.contact-form input,.contact-form select,.contact-form textarea{padding:12px;border-radius:8px;border:1px solid #222;background:#0b0b0b;color:var(--text)}
+.form-actions{display:flex;gap:8px;align-items:center}
+.contact-info{background:var(--panel);padding:16px;border-radius:10px}
+.contact-info a{color:var(--muted)}
+.map iframe{width:100%;height:200px;border:0;border-radius:8px}
+
+/* FOOTER */
+.footer{padding:20px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03);margin-top:30px}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.9);z-index:2000}
+.lightbox img{max-width:92%;max-height:86%;border-radius:8px}
+.lb-close{position:fixed;top:18px;right:20px;background:transparent;border:0;color:#fff;font-size:26px;cursor:pointer}
+
+/* STATUS */
+.success{color:#8ef08e;margin-top:10px}
+.error{color:#ff9b9b;margin-top:10px}
+
+/* SMALL SCREENS */
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr}
+  .pf-item img,.gallery-card img{height:200px}
+  .hero-inner h1{font-size:1.8rem}
+  .nav{display:none}
+}
+/* Mobile responsive tweaks */
+@media (max-width: 768px) {
+  header, nav, .hero, .section {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.4rem 0.6rem;
+    font-size: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
